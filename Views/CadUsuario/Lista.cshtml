@@ -1,0 +1,41 @@
+@model List<Usuario>
+@{
+    ViewData["Title"] = "Lista";
+}
+<div class="row">
+    <div class="col-md-12">
+    <form class="form-inline" method="POST">
+        <div class="form-group mb-2">
+            <select name="" class="form-control">
+                <option value="loginUsuario">Nome de usuário</option>
+                <option value="senhaUsuario">Senha</option>
+            </select>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped"> 
+            <thead>
+                <tr><th>Id</th>
+                <th>Usuário</th>
+                <th>Senha</th>
+                <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(Usuario u in Model)
+                {
+                <tr>
+                    <td>@u.Id</td>
+                    <td>@u.loginUsuario</td>
+                    <td>@u.senhaUsuario</td>
+                    <td><a href="/CadUsuario/Edicao/@u.Id">Editar</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
