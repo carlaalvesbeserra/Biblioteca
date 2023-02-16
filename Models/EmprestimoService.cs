@@ -26,6 +26,7 @@ namespace Biblioteca.Models
                 emprestimo.DataEmprestimo = e.DataEmprestimo;
                 emprestimo.DataDevolucao = e.DataDevolucao;
                 emprestimo.Devolvido = e.Devolvido;
+                emprestimo.Atrasado = e.Atrasado;
 
                 bc.SaveChanges();
             }

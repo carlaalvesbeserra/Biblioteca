@@ -38,6 +38,7 @@
                 <th scope="col">Livro</th>
                 <th scope="col">Autor</th>
                 <th scope="col">Devolvido</th>
+                <th scope="col">Atrasado</th>
                 <th scope="row"></th>
                 </tr>
             </thead>
@@ -52,6 +53,7 @@
                     <td>@e.Livro.Titulo</td>
                     <td>@e.Livro.Autor</td>
                     <td>@e.Devolvido</td>
+                    <td>@e.Atrasado</td>
                     <td><a href="/Emprestimo/Edicao/@e.Id">Editar</a></td>
                 </tr>
                 }
