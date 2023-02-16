@@ -39,5 +39,14 @@ namespace Biblioteca.Controllers
             Usuario u = uc.ObterPorId(id);
             return View(u);
         }
+        
+        public IActionResult Excluir(int id)
+        {
+            Autenticacao.CheckLogin(this);
+            UsuarioService uc = new UsuarioService();
+            uc.Deletar(id);
+            @ViewBag.Pag = "Conta excluida com sucesso!";
+            return View();
+        }
     }
 }

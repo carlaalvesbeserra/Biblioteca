@@ -41,5 +41,15 @@ namespace Biblioteca.Models
                 return consulta;
             }
         }
+
+         public void Deletar(int id)
+        {
+            using(BibliotecaContext bc = new BibliotecaContext())
+            {
+                Usuario usuario = bc.Usuario.Find(id);
+                bc.Usuario.Remove(usuario);
+                bc.SaveChanges();
+            }
+        }
     }
 }
